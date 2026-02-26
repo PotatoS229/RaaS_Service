@@ -1,5 +1,6 @@
 import './Menu.css';
 import {Link} from 'react-router-dom'
+import MenuButton from '../../components/MenuButton/MenuButton.tsx'
 
 const MenuPage = () => {
     return (
@@ -14,53 +15,59 @@ const MenuPage = () => {
                 <h2>📋 Меню возможностей</h2>
                 <div className="menu-grid">
 
-                    <div className="menu-btn" role="button">
-                        <span>1.</span> Низкоуровневые сетевые взаимодействия (raw sockets, манипуляция пакетами)
-                    </div>
 
-                    <div className="menu-btn" role="button">
-                        <span>2.</span> Полиморфная эвазия (Proteus-режим) — динамическое переключение протоколов
-                    </div>
+                    <div className='testBlack'>
+                        <p>RAW Sockets</p>
 
-                    <div className="menu-btn" role="button">
-                        <span>3.</span> Impersonation Engine — имитация человеческого поведения
-                    </div>
+                        <p>Proteus (логотип хамелеона)</p>
 
-                    <div className="menu-btn" role="button">
-                        <span>4.</span> Автономный Red Team Assistant — принятие решений на основе контекста и построение цепочек атак
-                    </div>
+                        <p>Impersonator</p>
 
-                    <div className="menu-btn" role="button">
-                        <span>5.</span> OSINT-движок — интеграция с Shodan, GitHub и поиск утечек
-                    </div>
+                        <p>Autopilot (AI)</p>
 
-                    <div className="menu-btn" role="button">
-                        <span>6.</span> C2-фреймворк с P2P сетью агентов
-                    </div>
+                        <p>Recon (OSINT)</p>
 
-                    <div className="menu-btn" role="button">
-                        <span>7.</span> Безопасный режим (песочница, прогноз урона)
-                    </div>
+                        <p>P2P Mesh</p>
 
-                    <div className="menu-btn" role="button">
-                        <span>8.</span> Интеграции и отчетность (экспорт в Jira, SIEM, генерация доказательной базы)
-                    </div>
+                        <p>Dry Run</p>
 
-                    <div className="menu-btn" role="button">
-                        <span>9.</span> DevOps и инфраструктура (оркестрация агентов, масштабирование)
-                    </div>
+                        <p>Integrations</p>
 
-                    <div className="menu-btn" role="button">
-                        <span>10.</span> Дашборд статистики
-                    </div>
+                        <p>Orchestrator</p>
 
-                    <div className="menu-btn" role="button">
-                        <span>11.</span> Панель управления атаками
-                    </div>
+                        <p>Metrics</p>
 
-                    <div className="menu-btn" role="button">
-                        <span>12.</span> Визуализация графа атак с предиктивными векторами
-                    </div>
+                        <p>Arsenal</p>
+
+                        <p>Graph</p>
+                    </div>    
+
+
+
+                    <MenuButton index={1} name={"Низкоуровневые сетевые взаимодействия (raw sockets, манипуляция пакетами)"}></MenuButton>
+
+                    <MenuButton index={2} name={"Полиморфная эвазия (Proteus-режим) — динамическое переключение протоколов"}></MenuButton>
+
+                    <MenuButton index={3} name={"Impersonation Engine — имитация человеческого поведения"}></MenuButton>
+
+                    <MenuButton index={4} name={"Автономный Red Team Assistant — принятие решений на основе контекста и построение цепочек атак"}></MenuButton>
+
+                    <MenuButton index={5} name={"OSINT-движок — интеграция с Shodan, GitHub и поиск утечек"}></MenuButton>
+
+                    <MenuButton index={6} name={"C2-фреймворк с P2P сетью агентов"}></MenuButton>
+
+                    <MenuButton index={7} name={"Безопасный режим (песочница, прогноз урона"}></MenuButton>
+
+                    <MenuButton index={8} name={"Интеграции и отчетность (экспорт в Jira, SIEM, генерация доказательной базы)"}></MenuButton>
+
+                    <MenuButton index={9} name={"DevOps и инфраструктура (оркестрация агентов, масштабирование)"}></MenuButton>
+
+                    <MenuButton index={10} name={"Дашборд статистики"}></MenuButton>
+
+                    <MenuButton index={11} name={"Панель управления атаками"}></MenuButton>
+
+                    <MenuButton index={12} name={"Визуализация графа атак с предиктивными векторами"}></MenuButton>
+
                 </div>
             </aside>
 
