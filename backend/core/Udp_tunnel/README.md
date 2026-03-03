@@ -133,3 +133,33 @@ flowchart TB
     Q -.-> D
     R -.-> C
 ```
+
+```bash
+udpilot-core/
+├── CMakeLists.txt
+├── src/
+│   ├── main.cpp                 # Точка входа
+│   ├── core/
+│   │   ├── vpn_core.cpp/h       # Основной класс управления VPN
+│   │   ├── tun_manager.cpp/h    # Управление TUN интерфейсом
+│   │   └── packet_forwarder.cpp/h # Пересылка пакетов
+│   ├── tunnel/
+│   │   ├── udp_over_tcp.cpp/h   # Аналог udp2raw
+│   │   ├── encryption.cpp/h     # Шифрование (если нужно)
+│   │   └── protocol.cpp/h       # Собственный протокол обертки
+│   ├── metrics/
+│   │   ├── collector.cpp/h      # Сбор метрик
+│   │   └── reporter.cpp/h       # Отправка метрик в UI
+│   ├── ipc/
+│   │   ├── command_server.cpp/h # Получение команд от NestJS
+│   │   └── socket_comm.cpp/h    # Unix сокеты / Windows pipes
+│   └── utils/
+│       ├── logger.cpp/h         # Логирование
+│       └── config.cpp/h         # Работа с конфигами
+├── third_party/                  # Внешние зависимости
+│   ├── asio/                     # Boost.Asio или standalone Asio
+│   └── json/                     # nlohmann/json
+└── tests/
+    ├── unit/                     # Юнит-тесты
+    └── integration/               # Интеграционные тесты
+    ```
